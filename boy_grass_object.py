@@ -50,8 +50,10 @@ class Small_ball:
         frame_height = self.image.h
         if(self.y > 40 + frame_height):
             self.y -= self.speed
+            if(self.y <= 40 + frame_height):
+                self.y = 40 + frame_height
         else:
-            self.y = 40 + frame_height
+            pass
 
     def draw(self):
         self.image.draw(self.x,self.y)
@@ -66,8 +68,10 @@ class Big_ball:
         frame_height = self.image.h
         if (self.y > 30 + frame_height):
             self.y -= self.speed
+            if (self.y <= 30 + frame_height):
+                self.y = 30 + frame_height
         else:
-            self.y = 30 + frame_height
+           pass
 
     def draw(self):
         self.image.draw(self.x, self.y)
