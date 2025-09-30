@@ -47,7 +47,12 @@ class Small_ball:
         self.speed = random.randint(3,10)
 
     def update(self):
-        self.y -= self.speed
+        frame_height = self.image.h
+        if(self.y > 40 + frame_height):
+            self.y -= self.speed
+        else:
+            self.y = 40 + frame_height
+
     def draw(self):
         self.image.draw(self.x,self.y)
 
@@ -58,7 +63,11 @@ class Big_ball:
         self.speed = random.randint(3, 10)
 
     def update(self):
-        self.y -= self.speed
+        frame_height = self.image.h
+        if (self.y > 30 + frame_height):
+            self.y -= self.speed
+        else:
+            self.y = 30 + frame_height
 
     def draw(self):
         self.image.draw(self.x, self.y)
