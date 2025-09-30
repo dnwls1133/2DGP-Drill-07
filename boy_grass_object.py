@@ -42,7 +42,9 @@ class Zombie:
                              frame_height,self.x,self.y, frame_width // 2, frame_height // 2)
 class Small_ball:
     def __init__(self):
-        pass
+        self.x , self.y = random.randint(50,750),599
+        self.image = load_image('ball21x21.png')
+
     def update(self):
         pass
     def draw(self):
@@ -50,7 +52,8 @@ class Small_ball:
 
 class Big_ball:
     def __init__(self):
-        pass
+        self.x, self.y = random.randint(50, 750), 599
+        self.image = load_image('ball21x21.png')
 
     def update(self):
         pass
