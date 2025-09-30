@@ -46,20 +46,20 @@ class Small_ball:
         self.image = load_image('ball21x21.png')
 
     def update(self):
-        pass
+        self.y -= 5
     def draw(self):
-        pass
+        self.image.draw(self.x,self.y)
 
 class Big_ball:
     def __init__(self):
         self.x, self.y = random.randint(50, 750), 599
-        self.image = load_image('ball21x21.png')
+        self.image = load_image('ball41x41.png')
 
     def update(self):
-        pass
+        self.y -= 5
 
     def draw(self):
-        pass
+        self.image.draw(self.x, self.y)
 
 
 
