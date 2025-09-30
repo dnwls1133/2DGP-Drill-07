@@ -62,12 +62,13 @@ def reset_world():
     grass = Grass() # Grass 도장을 이용해서 grass 객체 생성
     world.append(grass)
 
-    global team
+
     team = [Boy() for i in range(10)]
     world += team
     zombie = Zombie()
     world.append(zombie)
 
+    balls = [Small_ball() if i % 2 == 0 else Big_ball() for i in range(20)]
 def update_world():
     for game_object in world:
         game_object.update()
