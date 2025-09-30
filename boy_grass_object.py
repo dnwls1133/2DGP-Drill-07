@@ -106,7 +106,7 @@ def reset_world():
     zombie = Zombie()
     world.append(zombie)
 
-    balls = [Small_ball() if i % 2 == 0 else Big_ball() for i in range(20)]
+    balls = [Small_ball() if (i + random.randint(1,10)) % 2 == 0 else Big_ball() for i in range(20)]
     world += balls
 
 def update_world():
